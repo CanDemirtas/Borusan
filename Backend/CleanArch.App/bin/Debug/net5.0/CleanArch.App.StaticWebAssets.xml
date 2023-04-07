@@ -1,0 +1,4 @@
+﻿<StaticWebAssets Version="1.0">
+  <ContentRoot BasePath="/" Path="C:\Users\pc\Desktop\Borusan\Clean-Architecture-ASP.NET-Core\src\CleanArch.App\bin\Debug\net5.0\wwwroot\" />
+  <ContentRoot BasePath="/" Path="C:\Users\pc\Desktop\Borusan\Clean-Architecture-ASP.NET-Core\src\CleanArch.App\obj\Debug\net5.0\scopedcss\bundle\" />
+</StaticWebAssets>
