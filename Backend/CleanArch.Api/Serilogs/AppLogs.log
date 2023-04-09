@@ -1,0 +1,1313 @@
+2023-04-09 19:10:32.467 +03:00 [WRN] No type was specified for the decimal property 'Quantity' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+2023-04-09 19:10:32.481 +03:00 [WRN] No type was specified for the decimal property 'Weight' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+2023-04-09 19:10:32.529 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 19:10:32.724 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-04-09 19:10:32.741 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-04-09 19:10:32.743 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-04-09 19:10:32.743 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-04-09 19:10:32.752 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-04-09 19:10:32.761 +03:00 [INF] No migrations were applied. The database is already up to date.
+2023-04-09 19:10:32.834 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-09 19:10:32.834 +03:00 [INF] Hosting environment: Development
+2023-04-09 19:10:32.837 +03:00 [INF] Content root path: C:\Users\pc\Desktop\Borusan\Backend\CleanArch.Api
+2023-04-09 19:10:32.851 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44311/swagger - -
+2023-04-09 19:10:32.896 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44311/swagger - - - 404 - - 46.5646ms
+2023-04-09 19:10:35.421 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:44311/api/Order/FetchOrders - 0
+2023-04-09 19:10:35.438 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 19:10:35.456 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 19:10:39.438 +03:00 [INF] Hello, world!
+2023-04-09 19:10:39.447 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 19:10:39.570 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 19:10:39.733 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 19:10:39.740 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 4280.7991ms
+2023-04-09 19:10:39.740 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 19:10:39.742 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:44311/api/Order/FetchOrders - 0 - 200 - text/plain;+charset=utf-8 4321.7699ms
+2023-04-09 19:11:21.690 +03:00 [WRN] No type was specified for the decimal property 'Quantity' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+2023-04-09 19:11:21.703 +03:00 [WRN] No type was specified for the decimal property 'Weight' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+2023-04-09 19:11:21.750 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 19:11:21.967 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-04-09 19:11:21.982 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-04-09 19:11:21.984 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-04-09 19:11:21.984 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-04-09 19:11:21.992 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-04-09 19:11:22.001 +03:00 [INF] No migrations were applied. The database is already up to date.
+2023-04-09 19:11:22.080 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-09 19:11:22.080 +03:00 [INF] Hosting environment: Development
+2023-04-09 19:11:22.080 +03:00 [INF] Content root path: C:\Users\pc\Desktop\Borusan\Backend\CleanArch.Api
+2023-04-09 19:11:22.097 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44311/swagger - -
+2023-04-09 19:11:22.147 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44311/swagger - - - 404 - - 52.3517ms
+2023-04-09 19:11:23.105 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:44311/api/Order/FetchOrders - 0
+2023-04-09 19:11:23.120 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 19:11:23.135 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 19:11:23.232 +03:00 [INF] Hello, world!
+2023-04-09 19:11:23.232 +03:00 [ERR] Hello, world!
+2023-04-09 19:11:23.242 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 19:11:23.390 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 19:11:23.562 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 19:11:23.574 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 435.501ms
+2023-04-09 19:11:23.575 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 19:11:23.578 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:44311/api/Order/FetchOrders - 0 - 200 - text/plain;+charset=utf-8 472.7143ms
+2023-04-09 22:16:54.110 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:44311/api/Order/FetchOrders - 0
+2023-04-09 22:16:54.153 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 22:16:54.168 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 22:16:54.174 +03:00 [INF] Hello, world!
+2023-04-09 22:16:54.174 +03:00 [ERR] Hello, world!
+2023-04-09 22:16:54.212 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 22:16:54.288 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 22:16:54.294 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 22:16:54.298 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 129.4674ms
+2023-04-09 22:16:54.298 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 22:16:54.302 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:44311/api/Order/FetchOrders - 0 - 200 - text/plain;+charset=utf-8 201.4283ms
+2023-04-09 22:21:08.437 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/x-www-form-urlencoded 0
+2023-04-09 22:21:08.440 +03:00 [INF] No CORS policy found for the specified request.
+2023-04-09 22:21:08.440 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 22:21:08.440 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 22:21:08.442 +03:00 [INF] Hello, world!
+2023-04-09 22:21:08.442 +03:00 [ERR] Hello, world!
+2023-04-09 22:21:08.443 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 22:21:08.453 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 22:21:08.453 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 22:21:08.454 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 13.3716ms
+2023-04-09 22:21:08.454 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 22:21:08.455 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/x-www-form-urlencoded 0 - 200 - text/plain;+charset=utf-8 17.1495ms
+2023-04-09 22:21:12.578 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/x-www-form-urlencoded 0
+2023-04-09 22:21:12.578 +03:00 [INF] No CORS policy found for the specified request.
+2023-04-09 22:21:12.578 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 22:21:12.578 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 22:21:12.583 +03:00 [INF] Hello, world!
+2023-04-09 22:21:12.583 +03:00 [ERR] Hello, world!
+2023-04-09 22:21:12.583 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 22:21:12.585 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 22:21:12.620 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 22:21:12.620 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 41.4817ms
+2023-04-09 22:21:12.620 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 22:21:12.623 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/x-www-form-urlencoded 0 - 200 - text/plain;+charset=utf-8 43.7020ms
+2023-04-09 22:21:26.687 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/x-www-form-urlencoded 0
+2023-04-09 22:21:26.687 +03:00 [INF] No CORS policy found for the specified request.
+2023-04-09 22:21:26.687 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 22:21:26.687 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 22:21:26.688 +03:00 [INF] Hello, world!
+2023-04-09 22:21:26.688 +03:00 [ERR] Hello, world!
+2023-04-09 22:21:29.360 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 22:21:29.362 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 22:21:29.363 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 22:21:29.363 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 2675.8327ms
+2023-04-09 22:21:29.363 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 22:21:29.364 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/x-www-form-urlencoded 0 - 200 - text/plain;+charset=utf-8 2676.8331ms
+2023-04-09 22:29:38.021 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44311/api/Order/GetAllCategories - -
+2023-04-09 22:29:38.032 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44311/api/Order/GetAllCategories - - - 404 - - 10.4649ms
+2023-04-09 22:30:29.584 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-09 22:30:29.584 +03:00 [INF] No CORS policy found for the specified request.
+2023-04-09 22:30:29.584 +03:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2023-04-09 22:30:29.587 +03:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2023-04-09 22:30:29.588 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 405 - - 3.7862ms
+2023-04-09 22:30:29.637 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-09 22:30:29.637 +03:00 [INF] No CORS policy found for the specified request.
+2023-04-09 22:30:29.637 +03:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2023-04-09 22:30:29.637 +03:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2023-04-09 22:30:29.638 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 405 - - 0.9659ms
+2023-04-09 22:32:16.597 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-09 22:32:16.623 +03:00 [INF] No CORS policy found for the specified request.
+2023-04-09 22:32:16.623 +03:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2023-04-09 22:32:16.623 +03:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2023-04-09 22:32:16.624 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 405 - - 26.4775ms
+2023-04-09 22:32:16.635 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-09 22:32:16.638 +03:00 [INF] No CORS policy found for the specified request.
+2023-04-09 22:32:16.638 +03:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2023-04-09 22:32:16.638 +03:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2023-04-09 22:32:16.639 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 405 - - 3.5315ms
+2023-04-09 22:32:39.936 +03:00 [WRN] No type was specified for the decimal property 'Quantity' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+2023-04-09 22:32:39.953 +03:00 [WRN] No type was specified for the decimal property 'Weight' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+2023-04-09 22:32:40.012 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 22:32:40.265 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-04-09 22:32:40.280 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-04-09 22:32:40.282 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-04-09 22:32:40.283 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-04-09 22:32:40.292 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-04-09 22:32:40.302 +03:00 [INF] No migrations were applied. The database is already up to date.
+2023-04-09 22:32:40.395 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-09 22:32:40.395 +03:00 [INF] Hosting environment: Development
+2023-04-09 22:32:40.395 +03:00 [INF] Content root path: C:\Users\pc\Desktop\Borusan\Backend\CleanArch.Api
+2023-04-09 22:32:40.415 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44311/swagger - -
+2023-04-09 22:32:40.467 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44311/swagger - - - 404 - - 53.5564ms
+2023-04-09 22:32:49.783 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-09 22:32:49.788 +03:00 [INF] No CORS policy found for the specified request.
+2023-04-09 22:32:49.788 +03:00 [INF] No CORS policy found for the specified request.
+2023-04-09 22:32:49.790 +03:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2023-04-09 22:32:49.791 +03:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2023-04-09 22:32:49.792 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 405 - - 8.8387ms
+2023-04-09 22:32:49.833 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-09 22:32:49.833 +03:00 [INF] No CORS policy found for the specified request.
+2023-04-09 22:32:49.834 +03:00 [INF] No CORS policy found for the specified request.
+2023-04-09 22:32:49.834 +03:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2023-04-09 22:32:49.834 +03:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2023-04-09 22:32:49.834 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 405 - - 1.5408ms
+2023-04-09 22:35:03.061 +03:00 [WRN] No type was specified for the decimal property 'Quantity' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+2023-04-09 22:35:03.076 +03:00 [WRN] No type was specified for the decimal property 'Weight' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+2023-04-09 22:35:03.126 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 22:35:03.333 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-04-09 22:35:03.347 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-04-09 22:35:03.349 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-04-09 22:35:03.350 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-04-09 22:35:03.359 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-04-09 22:35:03.370 +03:00 [INF] No migrations were applied. The database is already up to date.
+2023-04-09 22:35:03.461 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-09 22:35:03.462 +03:00 [INF] Hosting environment: Development
+2023-04-09 22:35:03.462 +03:00 [INF] Content root path: C:\Users\pc\Desktop\Borusan\Backend\CleanArch.Api
+2023-04-09 22:35:03.477 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44311/swagger - -
+2023-04-09 22:35:03.524 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44311/swagger - - - 404 - - 48.5227ms
+2023-04-09 22:35:25.108 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-09 22:35:25.115 +03:00 [INF] CORS policy execution successful.
+2023-04-09 22:35:25.117 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 204 - - 12.0794ms
+2023-04-09 22:35:25.122 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 22:35:25.130 +03:00 [INF] CORS policy execution successful.
+2023-04-09 22:35:25.133 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 22:35:25.153 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 22:35:25.263 +03:00 [INF] Hello, world!
+2023-04-09 22:35:25.263 +03:00 [ERR] Hello, world!
+2023-04-09 22:35:25.273 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 22:35:25.411 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 22:35:25.565 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 22:35:25.572 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 416.1246ms
+2023-04-09 22:35:25.573 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 22:35:25.575 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 454.7282ms
+2023-04-09 22:35:46.705 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-09 22:35:46.707 +03:00 [INF] CORS policy execution successful.
+2023-04-09 22:35:46.708 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 204 - - 2.9920ms
+2023-04-09 22:35:46.709 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 22:35:46.709 +03:00 [INF] CORS policy execution successful.
+2023-04-09 22:35:46.709 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 22:35:46.710 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 22:35:46.710 +03:00 [INF] Hello, world!
+2023-04-09 22:35:46.710 +03:00 [ERR] Hello, world!
+2023-04-09 22:35:46.736 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 22:35:46.741 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 22:35:46.744 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 22:35:46.745 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 34.7081ms
+2023-04-09 22:35:46.745 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 22:35:46.745 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 36.2325ms
+2023-04-09 23:11:51.416 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-09 23:11:51.416 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:11:51.417 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 204 - - 0.8397ms
+2023-04-09 23:11:51.419 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:11:51.419 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:11:51.419 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:11:51.419 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:11:51.421 +03:00 [INF] Hello, world!
+2023-04-09 23:11:51.421 +03:00 [ERR] Hello, world!
+2023-04-09 23:11:51.422 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:11:51.449 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:11:51.449 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:11:51.450 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 30.4008ms
+2023-04-09 23:11:51.450 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:11:51.450 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 31.3833ms
+2023-04-09 23:17:13.697 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-09 23:17:13.698 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:17:13.725 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 204 - - 28.8421ms
+2023-04-09 23:17:13.729 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:17:13.729 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:17:13.729 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:17:13.729 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:17:13.730 +03:00 [INF] Hello, world!
+2023-04-09 23:17:13.730 +03:00 [ERR] Hello, world!
+2023-04-09 23:17:13.730 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:17:13.740 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:17:13.740 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:17:13.741 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 11.162ms
+2023-04-09 23:17:13.741 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:17:13.743 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 13.8904ms
+2023-04-09 23:17:30.768 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-09 23:17:30.768 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:17:30.769 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 204 - - 0.4855ms
+2023-04-09 23:17:30.771 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:17:30.772 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:17:30.774 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:17:30.774 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:17:30.774 +03:00 [INF] Hello, world!
+2023-04-09 23:17:30.774 +03:00 [ERR] Hello, world!
+2023-04-09 23:17:30.774 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:17:30.779 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:17:30.779 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:17:30.780 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 5.7917ms
+2023-04-09 23:17:30.780 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:17:30.780 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 9.4808ms
+2023-04-09 23:17:32.719 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:17:32.720 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:17:32.720 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:17:32.720 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:17:32.720 +03:00 [INF] Hello, world!
+2023-04-09 23:17:32.720 +03:00 [ERR] Hello, world!
+2023-04-09 23:17:32.720 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:17:32.722 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:17:32.723 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:17:32.723 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 3.0233ms
+2023-04-09 23:17:32.723 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:17:32.723 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 4.0114ms
+2023-04-09 23:17:36.885 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-09 23:17:36.885 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:17:36.885 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 204 - - 0.5141ms
+2023-04-09 23:17:36.887 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:17:36.887 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:17:36.887 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:17:36.888 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:17:36.888 +03:00 [INF] Hello, world!
+2023-04-09 23:17:36.888 +03:00 [ERR] Hello, world!
+2023-04-09 23:17:36.888 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:17:36.890 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:17:36.891 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:17:36.891 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 3.4109ms
+2023-04-09 23:17:36.891 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:17:36.891 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 4.4080ms
+2023-04-09 23:17:47.139 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-09 23:17:47.139 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:17:47.140 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 204 - - 0.4522ms
+2023-04-09 23:17:47.141 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:17:47.142 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:17:47.142 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:17:47.142 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:17:47.142 +03:00 [INF] Hello, world!
+2023-04-09 23:17:47.142 +03:00 [ERR] Hello, world!
+2023-04-09 23:17:47.143 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:17:47.145 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:17:47.145 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:17:47.145 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 3.2714ms
+2023-04-09 23:17:47.145 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:17:47.146 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 4.1854ms
+2023-04-09 23:18:14.772 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-09 23:18:14.773 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:18:14.775 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 204 - - 3.1455ms
+2023-04-09 23:18:14.778 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:18:14.779 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:18:14.779 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:18:14.779 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:18:14.782 +03:00 [INF] Hello, world!
+2023-04-09 23:18:14.782 +03:00 [ERR] Hello, world!
+2023-04-09 23:18:14.782 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:18:14.791 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:18:14.794 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:18:14.794 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 14.8731ms
+2023-04-09 23:18:14.794 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:18:14.820 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 39.9420ms
+2023-04-09 23:18:16.284 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:18:16.285 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:18:16.285 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:18:16.285 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:18:16.285 +03:00 [INF] Hello, world!
+2023-04-09 23:18:16.285 +03:00 [ERR] Hello, world!
+2023-04-09 23:18:16.285 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:18:16.287 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:18:16.288 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:18:16.288 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 3.0292ms
+2023-04-09 23:18:16.288 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:18:16.288 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 3.6799ms
+2023-04-09 23:18:18.841 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-09 23:18:18.841 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:18:18.842 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 204 - - 0.3974ms
+2023-04-09 23:18:18.843 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:18:18.843 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:18:18.843 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:18:18.843 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:18:18.844 +03:00 [INF] Hello, world!
+2023-04-09 23:18:18.844 +03:00 [ERR] Hello, world!
+2023-04-09 23:18:18.845 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:18:18.848 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:18:18.849 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:18:18.849 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 5.5882ms
+2023-04-09 23:18:18.849 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:18:18.850 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 6.5780ms
+2023-04-09 23:20:39.026 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-09 23:20:39.029 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:20:39.029 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 204 - - 3.2969ms
+2023-04-09 23:20:39.031 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:20:39.033 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:20:39.033 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:20:39.035 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:20:39.035 +03:00 [INF] Hello, world!
+2023-04-09 23:20:39.035 +03:00 [ERR] Hello, world!
+2023-04-09 23:20:39.036 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:20:39.047 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:20:39.048 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:20:39.049 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 14.2541ms
+2023-04-09 23:20:39.049 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:20:39.050 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 18.4373ms
+2023-04-09 23:20:39.893 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:20:39.893 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:20:39.893 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:20:39.893 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:20:39.893 +03:00 [INF] Hello, world!
+2023-04-09 23:20:39.893 +03:00 [ERR] Hello, world!
+2023-04-09 23:20:39.894 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:20:39.895 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:20:39.896 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:20:39.896 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 3.0815ms
+2023-04-09 23:20:39.896 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:20:39.897 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 3.9429ms
+2023-04-09 23:20:40.368 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:20:40.368 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:20:40.368 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:20:40.368 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:20:40.369 +03:00 [INF] Hello, world!
+2023-04-09 23:20:40.369 +03:00 [ERR] Hello, world!
+2023-04-09 23:20:40.369 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:20:40.372 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:20:40.375 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:20:40.376 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 7.2858ms
+2023-04-09 23:20:40.376 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:20:40.376 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 8.6454ms
+2023-04-09 23:20:41.462 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-09 23:20:41.462 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:20:41.462 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 204 - - 0.3048ms
+2023-04-09 23:20:41.464 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:20:41.464 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:20:41.464 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:20:41.464 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:20:41.465 +03:00 [INF] Hello, world!
+2023-04-09 23:20:41.465 +03:00 [ERR] Hello, world!
+2023-04-09 23:20:41.465 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:20:41.466 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:20:41.467 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:20:41.467 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 3.0303ms
+2023-04-09 23:20:41.468 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:20:41.468 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 3.6347ms
+2023-04-09 23:20:49.569 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-09 23:20:49.569 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:20:49.570 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 204 - - 0.6509ms
+2023-04-09 23:20:49.571 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:20:49.571 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:20:49.572 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:20:49.572 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:20:49.572 +03:00 [INF] Hello, world!
+2023-04-09 23:20:49.572 +03:00 [ERR] Hello, world!
+2023-04-09 23:20:49.572 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:20:49.573 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:20:49.574 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:20:49.575 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 2.922ms
+2023-04-09 23:20:49.575 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:20:49.576 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 4.3137ms
+2023-04-09 23:20:50.195 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-09 23:20:50.196 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:20:50.196 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 204 - - 1.1085ms
+2023-04-09 23:20:50.201 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:20:50.201 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:20:50.201 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:20:50.201 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:20:50.202 +03:00 [INF] Hello, world!
+2023-04-09 23:20:50.202 +03:00 [ERR] Hello, world!
+2023-04-09 23:20:50.202 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:20:50.204 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:20:50.205 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:20:50.206 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 4.1887ms
+2023-04-09 23:20:50.206 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:20:50.207 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 6.3525ms
+2023-04-09 23:21:46.278 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-09 23:21:46.278 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:21:46.278 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 204 - - 0.3664ms
+2023-04-09 23:21:46.282 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:21:46.282 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:21:46.282 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:21:46.282 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:21:46.282 +03:00 [INF] Hello, world!
+2023-04-09 23:21:46.282 +03:00 [ERR] Hello, world!
+2023-04-09 23:21:46.282 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:21:46.294 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:21:46.296 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:21:46.297 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 14.898ms
+2023-04-09 23:21:46.297 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:21:46.302 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 20.5817ms
+2023-04-09 23:23:27.467 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-09 23:23:27.467 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:23:27.468 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 204 - - 1.1668ms
+2023-04-09 23:23:27.470 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:23:27.470 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:23:27.470 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:23:27.471 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:23:27.471 +03:00 [INF] Hello, world!
+2023-04-09 23:23:27.471 +03:00 [ERR] Hello, world!
+2023-04-09 23:23:27.471 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:23:27.482 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:23:27.483 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:23:27.483 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 12.3596ms
+2023-04-09 23:23:27.483 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:23:27.483 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 13.0327ms
+2023-04-09 23:23:52.795 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-09 23:23:52.795 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:23:52.796 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 204 - - 1.0979ms
+2023-04-09 23:23:52.799 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:23:52.799 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:23:52.799 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:23:52.799 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:23:52.799 +03:00 [INF] Hello, world!
+2023-04-09 23:23:52.800 +03:00 [ERR] Hello, world!
+2023-04-09 23:23:52.800 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:23:52.818 +03:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:23:52.821 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:23:52.822 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 22.4947ms
+2023-04-09 23:23:52.822 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:23:52.856 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 56.5880ms
+2023-04-09 23:24:00.766 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-09 23:24:00.767 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:24:00.767 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 204 - - 0.4849ms
+2023-04-09 23:24:00.768 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:24:00.769 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:24:00.769 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:24:00.769 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:24:00.769 +03:00 [INF] Hello, world!
+2023-04-09 23:24:00.770 +03:00 [ERR] Hello, world!
+2023-04-09 23:24:00.770 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:24:00.773 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:24:00.773 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:24:00.774 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 4.6431ms
+2023-04-09 23:24:00.774 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:24:00.779 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 7.1624ms
+2023-04-09 23:24:45.098 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-09 23:24:45.098 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:24:45.099 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 204 - - 0.3784ms
+2023-04-09 23:24:45.103 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:24:45.103 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:24:45.103 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:24:45.104 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:24:45.104 +03:00 [INF] Hello, world!
+2023-04-09 23:24:45.104 +03:00 [ERR] Hello, world!
+2023-04-09 23:24:45.104 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:24:45.114 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:24:45.114 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:24:45.115 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 11.0881ms
+2023-04-09 23:24:45.115 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:24:45.118 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 13.0105ms
+2023-04-09 23:24:53.899 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-09 23:24:53.899 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:24:53.899 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 204 - - 0.3073ms
+2023-04-09 23:24:53.900 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:24:53.901 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:24:53.901 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:24:53.901 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:24:53.901 +03:00 [INF] Hello, world!
+2023-04-09 23:24:53.901 +03:00 [ERR] Hello, world!
+2023-04-09 23:24:53.901 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:24:53.904 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:24:53.904 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:24:53.905 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 3.662ms
+2023-04-09 23:24:53.905 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:24:53.905 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 4.3936ms
+2023-04-09 23:24:59.227 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-09 23:24:59.227 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:24:59.227 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 204 - - 0.3381ms
+2023-04-09 23:24:59.229 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:24:59.229 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:24:59.229 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:24:59.229 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:24:59.229 +03:00 [INF] Hello, world!
+2023-04-09 23:24:59.229 +03:00 [ERR] Hello, world!
+2023-04-09 23:24:59.230 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:24:59.231 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:24:59.232 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:24:59.232 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 2.5418ms
+2023-04-09 23:24:59.232 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:24:59.232 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 3.2913ms
+2023-04-09 23:25:03.890 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:25:03.890 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:25:03.891 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:25:03.891 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:25:03.891 +03:00 [INF] Hello, world!
+2023-04-09 23:25:03.891 +03:00 [ERR] Hello, world!
+2023-04-09 23:25:03.892 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:25:03.893 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:25:03.894 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:25:03.895 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 4.1641ms
+2023-04-09 23:25:03.895 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:25:03.896 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 5.6012ms
+2023-04-09 23:25:27.180 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-09 23:25:27.180 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:25:27.181 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 204 - - 0.4136ms
+2023-04-09 23:25:27.186 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:25:27.187 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:25:27.187 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:25:27.187 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:25:27.187 +03:00 [INF] Hello, world!
+2023-04-09 23:25:27.187 +03:00 [ERR] Hello, world!
+2023-04-09 23:25:27.188 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:25:27.191 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:25:27.197 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:25:27.198 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 10.3644ms
+2023-04-09 23:25:27.198 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:25:27.200 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 13.2499ms
+2023-04-09 23:25:27.757 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-09 23:25:27.757 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:25:27.757 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 204 - - 0.2790ms
+2023-04-09 23:25:27.761 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:25:27.762 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:25:27.762 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:25:27.762 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:25:27.762 +03:00 [INF] Hello, world!
+2023-04-09 23:25:27.762 +03:00 [ERR] Hello, world!
+2023-04-09 23:25:27.762 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:25:27.763 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:25:27.768 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:25:27.768 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 6.1336ms
+2023-04-09 23:25:27.768 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:25:27.768 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 6.8506ms
+2023-04-09 23:25:51.612 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-09 23:25:51.612 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:25:51.613 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 204 - - 1.0751ms
+2023-04-09 23:25:51.615 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:25:51.615 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:25:51.615 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:25:51.615 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:25:51.616 +03:00 [INF] Hello, world!
+2023-04-09 23:25:51.616 +03:00 [ERR] Hello, world!
+2023-04-09 23:25:51.616 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:25:51.622 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:25:51.624 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:25:51.625 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 9.3591ms
+2023-04-09 23:25:51.625 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:25:51.625 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 10.1738ms
+2023-04-09 23:26:26.610 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-09 23:26:26.610 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:26:26.611 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 204 - - 1.0673ms
+2023-04-09 23:26:26.613 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:26:26.614 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:26:26.614 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:26:26.614 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:26:26.614 +03:00 [INF] Hello, world!
+2023-04-09 23:26:26.614 +03:00 [ERR] Hello, world!
+2023-04-09 23:26:26.614 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:26:26.622 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:26:26.624 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:26:26.624 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 10.1819ms
+2023-04-09 23:26:26.624 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:26:26.628 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 13.8818ms
+2023-04-09 23:33:29.554 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-09 23:33:29.555 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:33:29.557 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 204 - - 3.0797ms
+2023-04-09 23:33:29.563 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:33:29.563 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:33:29.563 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:33:29.563 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:33:29.564 +03:00 [INF] Hello, world!
+2023-04-09 23:33:29.564 +03:00 [ERR] Hello, world!
+2023-04-09 23:33:29.564 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:33:29.594 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:33:29.595 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:33:29.596 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 32.4534ms
+2023-04-09 23:33:29.596 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:33:29.596 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 33.6375ms
+2023-04-09 23:34:18.943 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-09 23:34:18.943 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:34:18.943 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 204 - - 0.2683ms
+2023-04-09 23:34:18.947 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:34:18.947 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:34:18.947 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:34:18.947 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:34:18.947 +03:00 [INF] Hello, world!
+2023-04-09 23:34:18.947 +03:00 [ERR] Hello, world!
+2023-04-09 23:34:18.947 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:34:18.959 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:34:18.964 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:34:18.965 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 17.3949ms
+2023-04-09 23:34:18.965 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:34:18.965 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 18.2920ms
+2023-04-09 23:34:32.936 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-09 23:34:32.936 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:34:32.937 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 204 - - 0.3777ms
+2023-04-09 23:34:32.938 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:34:32.938 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:34:32.938 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:34:32.938 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:34:32.938 +03:00 [INF] Hello, world!
+2023-04-09 23:34:32.939 +03:00 [ERR] Hello, world!
+2023-04-09 23:34:32.939 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:34:32.940 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:34:32.941 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:34:32.941 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 2.5022ms
+2023-04-09 23:34:32.941 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:34:32.941 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 3.0484ms
+2023-04-09 23:34:55.050 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-09 23:34:55.050 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:34:55.051 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 204 - - 0.3304ms
+2023-04-09 23:34:55.054 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:34:55.054 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:34:55.054 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:34:55.054 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:34:55.054 +03:00 [INF] Hello, world!
+2023-04-09 23:34:55.055 +03:00 [ERR] Hello, world!
+2023-04-09 23:34:55.055 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:34:55.063 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:34:55.099 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:34:55.099 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 44.6593ms
+2023-04-09 23:34:55.099 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:34:55.102 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 46.1927ms
+2023-04-09 23:34:55.264 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:34:55.264 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:34:55.264 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:34:55.265 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:34:55.265 +03:00 [INF] Hello, world!
+2023-04-09 23:34:55.265 +03:00 [ERR] Hello, world!
+2023-04-09 23:34:55.265 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:34:55.266 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:34:55.269 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:34:55.270 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 4.9736ms
+2023-04-09 23:34:55.270 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:34:55.270 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 5.5521ms
+2023-04-09 23:34:58.721 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-09 23:34:58.721 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:34:58.721 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 204 - - 0.3247ms
+2023-04-09 23:34:58.723 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:34:58.723 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:34:58.724 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:34:58.724 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:34:58.724 +03:00 [INF] Hello, world!
+2023-04-09 23:34:58.724 +03:00 [ERR] Hello, world!
+2023-04-09 23:34:58.725 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:34:58.728 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:34:58.729 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:34:58.729 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 5.1187ms
+2023-04-09 23:34:58.729 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:34:58.729 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 6.2881ms
+2023-04-09 23:35:14.263 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-09 23:35:14.264 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:35:14.264 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 204 - - 0.4175ms
+2023-04-09 23:35:14.265 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:35:14.265 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:35:14.265 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:35:14.265 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:35:14.266 +03:00 [INF] Hello, world!
+2023-04-09 23:35:14.266 +03:00 [ERR] Hello, world!
+2023-04-09 23:35:14.266 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:35:14.267 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:35:14.268 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:35:14.268 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 2.8543ms
+2023-04-09 23:35:14.269 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:35:14.269 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 3.5777ms
+2023-04-09 23:35:14.493 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:35:14.493 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:35:14.493 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:35:14.493 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:35:14.493 +03:00 [INF] Hello, world!
+2023-04-09 23:35:14.493 +03:00 [ERR] Hello, world!
+2023-04-09 23:35:14.493 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:35:14.494 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:35:14.495 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:35:14.495 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 2.5039ms
+2023-04-09 23:35:14.496 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:35:14.496 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 2.9205ms
+2023-04-09 23:35:15.661 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-09 23:35:15.661 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:35:15.661 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 204 - - 0.2148ms
+2023-04-09 23:35:15.662 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:35:15.662 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:35:15.662 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:35:15.662 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:35:15.662 +03:00 [INF] Hello, world!
+2023-04-09 23:35:15.663 +03:00 [ERR] Hello, world!
+2023-04-09 23:35:15.663 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:35:15.664 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:35:15.666 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:35:15.666 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 3.7024ms
+2023-04-09 23:35:15.666 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:35:15.666 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 4.2952ms
+2023-04-09 23:37:37.832 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-09 23:37:37.832 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:37:37.833 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 204 - - 1.5540ms
+2023-04-09 23:37:37.844 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:37:37.844 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:37:37.844 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:37:37.844 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:37:37.845 +03:00 [INF] Hello, world!
+2023-04-09 23:37:37.845 +03:00 [ERR] Hello, world!
+2023-04-09 23:37:37.850 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:37:37.859 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:37:37.863 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:37:37.863 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 18.5438ms
+2023-04-09 23:37:37.863 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:37:37.863 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 19.5059ms
+2023-04-09 23:37:37.932 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:37:37.933 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:37:37.933 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:37:37.933 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:37:37.933 +03:00 [INF] Hello, world!
+2023-04-09 23:37:37.933 +03:00 [ERR] Hello, world!
+2023-04-09 23:37:37.933 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:37:37.934 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:37:37.935 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:37:37.935 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 2.6304ms
+2023-04-09 23:37:37.935 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:37:37.936 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 3.9363ms
+2023-04-09 23:37:40.204 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-09 23:37:40.204 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:37:40.204 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 204 - - 0.6879ms
+2023-04-09 23:37:40.206 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:37:40.207 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:37:40.207 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:37:40.207 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:37:40.207 +03:00 [INF] Hello, world!
+2023-04-09 23:37:40.207 +03:00 [ERR] Hello, world!
+2023-04-09 23:37:40.207 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:37:40.210 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:37:40.211 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:37:40.211 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 4.0547ms
+2023-04-09 23:37:40.211 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:37:40.211 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 5.0145ms
+2023-04-09 23:37:56.446 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-09 23:37:56.446 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:37:56.446 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 204 - - 0.4001ms
+2023-04-09 23:37:56.449 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:37:56.450 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:37:56.450 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:37:56.450 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:37:56.450 +03:00 [INF] Hello, world!
+2023-04-09 23:37:56.450 +03:00 [ERR] Hello, world!
+2023-04-09 23:37:56.450 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:37:56.456 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:37:56.456 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:37:56.457 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 6.9459ms
+2023-04-09 23:37:56.457 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:37:56.457 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 7.8555ms
+2023-04-09 23:37:56.728 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:37:56.728 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:37:56.728 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:37:56.728 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:37:56.728 +03:00 [INF] Hello, world!
+2023-04-09 23:37:56.728 +03:00 [ERR] Hello, world!
+2023-04-09 23:37:56.728 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:37:56.735 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:37:56.735 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:37:56.736 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 7.5114ms
+2023-04-09 23:37:56.736 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:37:56.736 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 8.0865ms
+2023-04-09 23:37:57.427 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-09 23:37:57.427 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:37:57.427 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 204 - - 0.2107ms
+2023-04-09 23:37:57.428 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:37:57.429 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:37:57.429 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:37:57.429 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:37:57.429 +03:00 [INF] Hello, world!
+2023-04-09 23:37:57.429 +03:00 [ERR] Hello, world!
+2023-04-09 23:37:57.429 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:37:57.432 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:37:57.433 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:37:57.433 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 4.2362ms
+2023-04-09 23:37:57.433 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:37:57.434 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 5.9098ms
+2023-04-09 23:38:02.092 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:38:02.092 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:38:02.093 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:38:02.093 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:38:02.093 +03:00 [INF] Hello, world!
+2023-04-09 23:38:02.093 +03:00 [ERR] Hello, world!
+2023-04-09 23:38:02.093 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:38:02.095 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:38:02.096 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:38:02.096 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 3.3656ms
+2023-04-09 23:38:02.096 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:38:02.097 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 4.6174ms
+2023-04-09 23:38:02.180 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:38:02.180 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:38:02.180 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:38:02.180 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:38:02.180 +03:00 [INF] Hello, world!
+2023-04-09 23:38:02.180 +03:00 [ERR] Hello, world!
+2023-04-09 23:38:02.181 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:38:02.182 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:38:02.184 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:38:02.184 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 3.6355ms
+2023-04-09 23:38:02.184 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:38:02.184 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 4.3655ms
+2023-04-09 23:38:02.758 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-09 23:38:02.758 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:38:02.758 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 204 - - 0.2316ms
+2023-04-09 23:38:02.759 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:38:02.760 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:38:02.760 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:38:02.760 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:38:02.760 +03:00 [INF] Hello, world!
+2023-04-09 23:38:02.760 +03:00 [ERR] Hello, world!
+2023-04-09 23:38:02.760 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:38:02.761 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:38:02.762 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:38:02.762 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 2.4323ms
+2023-04-09 23:38:02.762 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:38:02.762 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 2.9501ms
+2023-04-09 23:38:21.490 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-09 23:38:21.491 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:38:21.491 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 204 - - 0.5869ms
+2023-04-09 23:38:21.492 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:38:21.493 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:38:21.493 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:38:21.493 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:38:21.493 +03:00 [INF] Hello, world!
+2023-04-09 23:38:21.493 +03:00 [ERR] Hello, world!
+2023-04-09 23:38:21.493 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:38:21.495 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:38:21.496 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:38:21.496 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 3.281ms
+2023-04-09 23:38:21.496 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:38:21.497 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 3.9727ms
+2023-04-09 23:38:21.701 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-09 23:38:21.701 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:38:21.701 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 204 - - 0.5583ms
+2023-04-09 23:38:21.704 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:38:21.704 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:38:21.704 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:38:21.704 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:38:21.704 +03:00 [INF] Hello, world!
+2023-04-09 23:38:21.705 +03:00 [ERR] Hello, world!
+2023-04-09 23:38:21.705 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:38:21.707 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:38:21.707 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:38:21.708 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 3.7194ms
+2023-04-09 23:38:21.708 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:38:21.709 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 4.8445ms
+2023-04-09 23:38:21.822 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:38:21.822 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:38:21.822 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:38:21.822 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:38:21.822 +03:00 [INF] Hello, world!
+2023-04-09 23:38:21.822 +03:00 [ERR] Hello, world!
+2023-04-09 23:38:21.822 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:38:21.823 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:38:21.824 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:38:21.824 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 2.4211ms
+2023-04-09 23:38:21.824 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:38:21.825 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 2.9019ms
+2023-04-09 23:38:24.231 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:38:24.231 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:38:24.232 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:38:24.232 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:38:24.232 +03:00 [INF] Hello, world!
+2023-04-09 23:38:24.232 +03:00 [ERR] Hello, world!
+2023-04-09 23:38:24.232 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:38:24.234 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:38:24.234 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:38:24.235 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 3.0062ms
+2023-04-09 23:38:24.235 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:38:24.235 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 3.9187ms
+2023-04-09 23:38:24.489 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:38:24.489 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:38:24.489 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:38:24.489 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:38:24.489 +03:00 [INF] Hello, world!
+2023-04-09 23:38:24.489 +03:00 [ERR] Hello, world!
+2023-04-09 23:38:24.489 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:38:24.490 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:38:24.492 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:38:24.492 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 3.2966ms
+2023-04-09 23:38:24.493 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:38:24.493 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 3.8978ms
+2023-04-09 23:38:28.375 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-09 23:38:28.375 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:38:28.375 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 204 - - 0.4446ms
+2023-04-09 23:38:28.377 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:38:28.377 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:38:28.377 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:38:28.377 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:38:28.377 +03:00 [INF] Hello, world!
+2023-04-09 23:38:28.377 +03:00 [ERR] Hello, world!
+2023-04-09 23:38:28.378 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:38:28.378 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:38:28.380 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:38:28.380 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 2.4976ms
+2023-04-09 23:38:28.380 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:38:28.380 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 3.0506ms
+2023-04-09 23:38:28.443 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:38:28.443 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:38:28.443 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:38:28.444 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:38:28.444 +03:00 [INF] Hello, world!
+2023-04-09 23:38:28.444 +03:00 [ERR] Hello, world!
+2023-04-09 23:38:28.444 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:38:28.445 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:38:28.446 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:38:28.446 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 2.6211ms
+2023-04-09 23:38:28.446 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:38:28.446 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 3.1956ms
+2023-04-09 23:38:29.415 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:38:29.415 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:38:29.415 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:38:29.416 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:38:29.416 +03:00 [INF] Hello, world!
+2023-04-09 23:38:29.416 +03:00 [ERR] Hello, world!
+2023-04-09 23:38:29.416 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:38:29.420 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:38:29.421 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:38:29.421 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 5.3267ms
+2023-04-09 23:38:29.421 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:38:29.421 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 6.2579ms
+2023-04-09 23:38:29.490 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:38:29.490 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:38:29.490 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:38:29.490 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:38:29.490 +03:00 [INF] Hello, world!
+2023-04-09 23:38:29.490 +03:00 [ERR] Hello, world!
+2023-04-09 23:38:29.490 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:38:29.492 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:38:29.493 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:38:29.493 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 3.1307ms
+2023-04-09 23:38:29.493 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:38:29.493 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 3.6375ms
+2023-04-09 23:38:30.147 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-09 23:38:30.147 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:38:30.147 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 204 - - 0.3286ms
+2023-04-09 23:38:30.149 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-09 23:38:30.149 +03:00 [INF] CORS policy execution successful.
+2023-04-09 23:38:30.149 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:38:30.149 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-09 23:38:30.149 +03:00 [INF] Hello, world!
+2023-04-09 23:38:30.149 +03:00 [ERR] Hello, world!
+2023-04-09 23:38:30.149 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-09 23:38:30.153 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-09 23:38:30.153 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-09 23:38:30.154 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 4.5617ms
+2023-04-09 23:38:30.154 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-09 23:38:30.154 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 5.1536ms
+2023-04-10 00:13:07.721 +03:00 [WRN] No type was specified for the decimal property 'Quantity' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+2023-04-10 00:13:07.739 +03:00 [WRN] No type was specified for the decimal property 'Weight' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+2023-04-10 00:13:07.797 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-10 00:13:08.023 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-04-10 00:13:08.043 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-04-10 00:13:08.045 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-04-10 00:13:08.045 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-04-10 00:13:08.058 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-04-10 00:13:08.069 +03:00 [INF] No migrations were applied. The database is already up to date.
+2023-04-10 00:13:08.170 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-10 00:13:08.170 +03:00 [INF] Hosting environment: Development
+2023-04-10 00:13:08.170 +03:00 [INF] Content root path: C:\Users\pc\Desktop\Borusan\Backend\CleanArch.Api
+2023-04-10 00:13:08.186 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44311/swagger - -
+2023-04-10 00:13:08.241 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44311/swagger - - - 404 - - 57.0318ms
+2023-04-10 00:13:52.463 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:44311/api/Order/UpdateStatus application/json 1018
+2023-04-10 00:13:52.477 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.UpdateStatus (CleanArch.Api)'
+2023-04-10 00:13:52.497 +03:00 [INF] Route matched with {action = "UpdateStatus", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] UpdateStatus(System.Collections.Generic.List`1[CleanArch.Application.ViewModels.OrderViewModel]) on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-10 00:13:52.632 +03:00 [INF] Hello, world!
+2023-04-10 00:13:52.632 +03:00 [ERR] Hello, world!
+2023-04-10 00:14:01.868 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-10 00:14:02.039 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+WHERE [o].[CustomerOrderNumber] IN (N'dawdawd', N'ABC123', N'ABC123')
+2023-04-10 00:14:20.772 +03:00 [INF] Executed DbCommand (74ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (DbType = DateTime2), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (Size = 4000), @p17='?' (DbType = DateTime2), @p18='?' (Size = 4000), @p19='?' (Size = 4000), @p20='?' (Size = 4000), @p21='?' (Size = 4000), @p22='?' (Size = 4000), @p23='?' (Size = 4000), @p38='?' (DbType = Guid), @p24='?' (Size = 4000), @p25='?' (DbType = DateTime2), @p26='?' (Size = 4000), @p27='?' (Size = 4000), @p28='?' (Size = 4000), @p29='?' (Size = 4000), @p30='?' (DbType = DateTime2), @p31='?' (DbType = Guid), @p32='?' (Size = 4000), @p33='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p34='?' (DbType = Int32), @p35='?' (DbType = Int32), @p36='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p37='?' (DbType = Int32), @p53='?' (DbType = Guid), @p39='?' (Size = 4000), @p40='?' (DbType = DateTime2), @p41='?' (Size = 4000), @p42='?' (Size = 4000), @p43='?' (Size = 4000), @p44='?' (Size = 4000), @p45='?' (DbType = DateTime2), @p46='?' (DbType = Guid), @p47='?' (Size = 4000), @p48='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p49='?' (DbType = Int32), @p50='?' (DbType = Int32), @p51='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p52='?' (DbType = Int32), @p68='?' (DbType = Guid), @p54='?' (Size = 4000), @p55='?' (DbType = DateTime2), @p56='?' (Size = 4000), @p57='?' (Size = 4000), @p58='?' (Size = 4000), @p59='?' (Size = 4000), @p60='?' (DbType = DateTime2), @p61='?' (DbType = Guid), @p62='?' (Size = 4000), @p63='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p64='?' (DbType = Int32), @p65='?' (DbType = Int32), @p66='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p67='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DECLARE @inserted0 TABLE ([Id] int, [_Position] [int]);
+MERGE [AuditTrails] USING (
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, 0),
+(@p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, 1),
+(@p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23, 2)) AS i ([AffectedColumns], [DateTime], [NewValues], [OldValues], [PrimaryKey], [TableName], [Type], [UserId], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([AffectedColumns], [DateTime], [NewValues], [OldValues], [PrimaryKey], [TableName], [Type], [UserId])
+VALUES (i.[AffectedColumns], i.[DateTime], i.[NewValues], i.[OldValues], i.[PrimaryKey], i.[TableName], i.[Type], i.[UserId])
+OUTPUT INSERTED.[Id], i._Position
+INTO @inserted0;
+
+SELECT [t].[Id] FROM [AuditTrails] t
+INNER JOIN @inserted0 i ON ([t].[Id] = [i].[Id])
+ORDER BY [i].[_Position];
+
+UPDATE [Orders] SET [CreatedBy] = @p24, [CreatedDate] = @p25, [CustomerOrderNumber] = @p26, [DeliveryAddress] = @p27, [DepartureAddress] = @p28, [LastModifiedBy] = @p29, [LastModifiedDate] = @p30, [MaterialCode] = @p31, [Note] = @p32, [Quantity] = @p33, [QuantityUnit] = @p34, [Status] = @p35, [Weight] = @p36, [WeightUnit] = @p37
+WHERE [Id] = @p38;
+SELECT @@ROWCOUNT;
+
+UPDATE [Orders] SET [CreatedBy] = @p39, [CreatedDate] = @p40, [CustomerOrderNumber] = @p41, [DeliveryAddress] = @p42, [DepartureAddress] = @p43, [LastModifiedBy] = @p44, [LastModifiedDate] = @p45, [MaterialCode] = @p46, [Note] = @p47, [Quantity] = @p48, [QuantityUnit] = @p49, [Status] = @p50, [Weight] = @p51, [WeightUnit] = @p52
+WHERE [Id] = @p53;
+SELECT @@ROWCOUNT;
+
+UPDATE [Orders] SET [CreatedBy] = @p54, [CreatedDate] = @p55, [CustomerOrderNumber] = @p56, [DeliveryAddress] = @p57, [DepartureAddress] = @p58, [LastModifiedBy] = @p59, [LastModifiedDate] = @p60, [MaterialCode] = @p61, [Note] = @p62, [Quantity] = @p63, [QuantityUnit] = @p64, [Status] = @p65, [Weight] = @p66, [WeightUnit] = @p67
+WHERE [Id] = @p68;
+SELECT @@ROWCOUNT;
+2023-04-10 00:14:23.644 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CleanArch.Application.ViewModels.OrderViewModel, CleanArch.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-10 00:14:23.673 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.UpdateStatus (CleanArch.Api) in 31172.3872ms
+2023-04-10 00:14:23.674 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.UpdateStatus (CleanArch.Api)'
+2023-04-10 00:14:23.676 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:44311/api/Order/UpdateStatus application/json 1018 - 200 - application/json;+charset=utf-8 31212.7196ms
+2023-04-10 00:14:42.494 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:44311/api/Order/FetchOrders - 0
+2023-04-10 00:14:42.496 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-10 00:14:42.499 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-10 00:14:42.500 +03:00 [INF] Hello, world!
+2023-04-10 00:14:42.500 +03:00 [ERR] Hello, world!
+2023-04-10 00:14:42.530 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-10 00:14:42.541 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-10 00:14:42.569 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-10 00:14:42.570 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 70.7544ms
+2023-04-10 00:14:42.571 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-10 00:14:42.571 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:44311/api/Order/FetchOrders - 0 - 200 - text/plain;+charset=utf-8 76.6474ms
+2023-04-10 00:15:34.332 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-10 00:15:34.335 +03:00 [INF] CORS policy execution successful.
+2023-04-10 00:15:34.336 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 204 - - 4.4493ms
+2023-04-10 00:15:34.337 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-10 00:15:34.340 +03:00 [INF] CORS policy execution successful.
+2023-04-10 00:15:34.340 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-10 00:15:34.341 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-10 00:15:34.342 +03:00 [INF] Hello, world!
+2023-04-10 00:15:34.343 +03:00 [ERR] Hello, world!
+2023-04-10 00:15:34.343 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-10 00:15:34.351 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-10 00:15:34.352 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-10 00:15:34.353 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 12.0733ms
+2023-04-10 00:15:34.353 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-10 00:15:34.353 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 15.9309ms
+2023-04-10 00:17:13.885 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-10 00:17:13.885 +03:00 [INF] CORS policy execution successful.
+2023-04-10 00:17:13.913 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 204 - - 28.2663ms
+2023-04-10 00:17:13.919 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-10 00:17:13.919 +03:00 [INF] CORS policy execution successful.
+2023-04-10 00:17:13.920 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-10 00:17:13.920 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-10 00:17:13.920 +03:00 [INF] Hello, world!
+2023-04-10 00:17:13.920 +03:00 [ERR] Hello, world!
+2023-04-10 00:17:13.921 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-10 00:17:13.927 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-10 00:17:13.928 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-10 00:17:13.928 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 8.2461ms
+2023-04-10 00:17:13.928 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-10 00:17:13.962 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 41.4600ms
+2023-04-10 00:17:14.029 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-10 00:17:14.030 +03:00 [INF] CORS policy execution successful.
+2023-04-10 00:17:14.030 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-10 00:17:14.030 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-10 00:17:14.030 +03:00 [INF] Hello, world!
+2023-04-10 00:17:14.030 +03:00 [ERR] Hello, world!
+2023-04-10 00:17:14.031 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-10 00:17:14.032 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-10 00:17:14.034 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-10 00:17:14.034 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 4.0525ms
+2023-04-10 00:17:14.034 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-10 00:17:14.034 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 5.1700ms
+2023-04-10 00:17:14.197 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-10 00:17:14.198 +03:00 [INF] CORS policy execution successful.
+2023-04-10 00:17:14.198 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-10 00:17:14.198 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-10 00:17:14.198 +03:00 [INF] Hello, world!
+2023-04-10 00:17:14.198 +03:00 [ERR] Hello, world!
+2023-04-10 00:17:14.199 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-10 00:17:14.200 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-10 00:17:14.204 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-10 00:17:14.205 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 6.5125ms
+2023-04-10 00:17:14.205 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-10 00:17:14.205 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 7.7174ms
+2023-04-10 00:17:14.968 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-10 00:17:14.969 +03:00 [INF] CORS policy execution successful.
+2023-04-10 00:17:14.969 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-10 00:17:14.969 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-10 00:17:14.970 +03:00 [INF] Hello, world!
+2023-04-10 00:17:14.970 +03:00 [ERR] Hello, world!
+2023-04-10 00:17:14.970 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-10 00:17:14.972 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-10 00:17:14.973 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-10 00:17:14.973 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 3.5744ms
+2023-04-10 00:17:14.973 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-10 00:17:14.974 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 5.3021ms
+2023-04-10 00:17:14.984 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-10 00:17:14.984 +03:00 [INF] CORS policy execution successful.
+2023-04-10 00:17:14.985 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-10 00:17:14.985 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-10 00:17:14.985 +03:00 [INF] Hello, world!
+2023-04-10 00:17:14.985 +03:00 [ERR] Hello, world!
+2023-04-10 00:17:14.985 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-10 00:17:14.987 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-10 00:17:14.988 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-10 00:17:14.988 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 3.3539ms
+2023-04-10 00:17:14.988 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-10 00:17:14.988 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 3.9873ms
+2023-04-10 00:17:15.269 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-10 00:17:15.269 +03:00 [INF] CORS policy execution successful.
+2023-04-10 00:17:15.269 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-10 00:17:15.269 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-10 00:17:15.269 +03:00 [INF] Hello, world!
+2023-04-10 00:17:15.269 +03:00 [ERR] Hello, world!
+2023-04-10 00:17:15.270 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-10 00:17:15.271 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-10 00:17:15.273 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-10 00:17:15.273 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 4.0135ms
+2023-04-10 00:17:15.273 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-10 00:17:15.273 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 4.9643ms
+2023-04-10 00:17:17.498 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - -
+2023-04-10 00:17:17.499 +03:00 [INF] CORS policy execution successful.
+2023-04-10 00:17:17.499 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44311/api/Order/FetchOrders - - - 204 - - 0.6513ms
+2023-04-10 00:17:17.501 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4
+2023-04-10 00:17:17.502 +03:00 [INF] CORS policy execution successful.
+2023-04-10 00:17:17.502 +03:00 [INF] Executing endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-10 00:17:17.502 +03:00 [INF] Route matched with {action = "FetchOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FetchOrders() on controller CleanArch.Api.Controllers.OrderController (CleanArch.Api).
+2023-04-10 00:17:17.502 +03:00 [INF] Hello, world!
+2023-04-10 00:17:17.502 +03:00 [ERR] Hello, world!
+2023-04-10 00:17:17.503 +03:00 [INF] Entity Framework Core 5.0.5 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=CleanArch.Api 
+2023-04-10 00:17:17.504 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreatedBy], [o].[CreatedDate], [o].[CustomerOrderNumber], [o].[DeliveryAddress], [o].[DepartureAddress], [o].[LastModifiedBy], [o].[LastModifiedDate], [o].[MaterialCode], [o].[Note], [o].[Quantity], [o].[QuantityUnit], [o].[Status], [o].[Weight], [o].[WeightUnit]
+FROM [Orders] AS [o]
+2023-04-10 00:17:17.505 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-04-10 00:17:17.506 +03:00 [INF] Executed action CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api) in 3.5172ms
+2023-04-10 00:17:17.506 +03:00 [INF] Executed endpoint 'CleanArch.Api.Controllers.OrderController.FetchOrders (CleanArch.Api)'
+2023-04-10 00:17:17.506 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44311/api/Order/FetchOrders application/json 4 - 200 - text/plain;+charset=utf-8 5.0748ms

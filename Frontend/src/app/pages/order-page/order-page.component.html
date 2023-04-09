@@ -1,0 +1,96 @@
+<div class="container" fxLayout="column" fxLayoutAlign="space-evenly center">
+
+    <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <!-- Checkbox Column -->
+        <ng-container matColumnDef="select">
+            <mat-header-cell *matHeaderCellDef></mat-header-cell>
+            <mat-cell *matCellDef="let row">
+                <mat-checkbox (click)="$event.stopPropagation()" (change)="selectHandler(row)"
+                    [checked]="selection.isSelected(row)">
+                </mat-checkbox>
+            </mat-cell>
+        </ng-container>
+
+        <!-- id Column -->
+        <ng-container matColumnDef="Id">
+            <mat-header-cell *matHeaderCellDef> Id </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.Id}} </mat-cell>
+        </ng-container>
+
+        <!-- customerOrderNumber Column -->
+        <ng-container matColumnDef="CustomerOrderNumber">
+            <mat-header-cell *matHeaderCellDef> Customer OrderNumber </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.CustomerOrderNumber}} </mat-cell>
+        </ng-container>
+
+        <!-- departureAddress Column -->
+        <ng-container matColumnDef="DepartureAddress">
+            <mat-header-cell *matHeaderCellDef> Departure Address </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.DepartureAddress}} </mat-cell>
+        </ng-container>
+
+        <!-- deliveryAddress Column -->
+        <ng-container matColumnDef="DeliveryAddress">
+            <mat-header-cell *matHeaderCellDef> Delivery Address </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.DeliveryAddress}} </mat-cell>
+        </ng-container>
+
+        <!-- quantity Column -->
+        <ng-container matColumnDef="Quantity">
+            <mat-header-cell *matHeaderCellDef> Quantity </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.Quantity}} </mat-cell>
+        </ng-container>
+
+        <!-- quantityUnit Column -->
+        <ng-container matColumnDef="QuantityUnit">
+            <mat-header-cell *matHeaderCellDef> Quantity Unit </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.QuantityUnit}} </mat-cell>
+        </ng-container>
+
+        <!-- weight Column -->
+        <ng-container matColumnDef="Weight">
+            <mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.Weight}} </mat-cell>
+        </ng-container>
+
+        <!-- weightUnit Column -->
+        <ng-container matColumnDef="WeightUnit">
+            <mat-header-cell *matHeaderCellDef> Weight Unit</mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.WeightUnit}} </mat-cell>
+        </ng-container>
+
+        <!-- status Column -->
+        <ng-container matColumnDef="Status">
+            <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.Status}} </mat-cell>
+        </ng-container>
+
+        <!-- material Column -->
+        <ng-container matColumnDef="Material">
+            <mat-header-cell *matHeaderCellDef> Material </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.Material}} </mat-cell>
+        </ng-container>
+
+        <!-- note Column -->
+        <ng-container matColumnDef="Note">
+            <mat-header-cell *matHeaderCellDef> Note </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.Note}} </mat-cell>
+        </ng-container>
+
+        <!-- createdDate Column -->
+        <ng-container matColumnDef="CreatedDate">
+            <mat-header-cell *matHeaderCellDef> CreatedDate </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.CreatedDate | date:'medium'}} </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;">
+        </mat-row>
+    </mat-table>
+
+    <pre>
+      <h3>Selected :</h3>
+      {{selection.selected | json}}
+    </pre>
+</div>
