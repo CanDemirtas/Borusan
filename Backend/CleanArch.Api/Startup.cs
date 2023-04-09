@@ -2,12 +2,16 @@ using CleanArch.Application;
 using CleanArch.Application.Middleware;
 using CleanArch.Infrastructure;
 using CleanArch.Persistence;
+using CleanArch.Persistence.Context;
 using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
@@ -15,17 +19,20 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.FeatureManagement;
 using Serilog;
+using System.Reflection;
 
 namespace CleanArch.Api
 {
     public class Startup
     {
         public IConfiguration Configuration { get; }
+        readonly string AllowAnyOrigin = "AllowAnyOrigin";
 
         public Startup(IConfiguration configuration)
         {
             Log.Logger = new LoggerConfiguration().ReadFrom.Configuration(configuration).CreateLogger();
             Configuration = configuration;
+
 
         }
 
@@ -48,6 +55,14 @@ namespace CleanArch.Api
             });
 
             services.AddFeatureManagement();
+            services.AddCors(options =>
+            {
+                options.AddPolicy(
+                  name: AllowAnyOrigin,
+                  builder => {
+                      builder.WithOrigins("*").AllowAnyHeader().AllowAnyMethod();
+                  });
+            });
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory log)
@@ -61,6 +76,11 @@ namespace CleanArch.Api
 
             app.UseRouting();
 
+            using (var serviceScope = app.ApplicationServices.GetService<IServiceScopeFactory>().CreateScope())
+            {
+                var context = serviceScope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+                context.Database.Migrate();
+            }
             //log.AddSerilog();
 
             //app.UseAuthentication();
@@ -89,9 +109,7 @@ namespace CleanArch.Api
 
             //app.UseCustomExceptionHandler();
 
-            //app.UseCors("Open");
-
-            app.UseCors("AllowAnyOrigin");
+            app.UseCors(AllowAnyOrigin);
 
             app.UseEndpoints(endpoints =>
             {

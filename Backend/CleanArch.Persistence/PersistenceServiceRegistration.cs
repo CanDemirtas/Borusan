@@ -12,11 +12,11 @@ namespace CleanArch.Persistence
         public static IServiceCollection AddPersistenceServices(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(configuration.GetConnectionString("CleanArchConnectionString")));
+                       options.UseSqlServer(configuration.GetConnectionString("DbConnectionString"), b => b.MigrationsAssembly("CleanArch.Api")));
 
             services.AddScoped(typeof(IGenericRepositoryAsync<>), typeof(GenericRepository<>));
 
-            services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<IOrderRepository, OrderRepository>();
 
             return services;
         }

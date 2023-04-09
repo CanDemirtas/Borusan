@@ -1,5 +1,5 @@
 ﻿using CleanArch.Application.Contracts.Infrastructure;
-using CleanArch.Infrastructure.Mail;
+using CleanArch.Infrastructure.Order;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -9,7 +9,7 @@ namespace CleanArch.Infrastructure
     {
         public static IServiceCollection AddInfrastructureServices(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddTransient<IEmailService, EmailService>();
+            services.AddTransient<IOrderService, OrderService>();
             return services;
         }
     }

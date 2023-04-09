@@ -1,57 +1,127 @@
 ﻿using CleanArch.Domain.Common;
 using CleanArch.Domain.Entities;
+using CleanArch.Domain.Enum;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace CleanArch.Persistence.Context
 {
-    public class ApplicationDbContext : AuditableContext
+    public class ApplicationDbContext : DbContext
     {
- 
+
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
            : base(options)
         {
-            ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
+            //ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
 
         }
 
-        public DbSet<Category> Categories { get; set; }
+        public DbSet<Material> Materials { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<AuditTrail> AuditTrails { get; set; }
 
+       
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            foreach (var property in builder.Model.GetEntityTypes()
-           .SelectMany(t => t.GetProperties())
-           .Where(p => p.ClrType == typeof(decimal) || p.ClrType == typeof(decimal?)))
-            {
-                property.SetColumnType("decimal(18,2)");
-            }
+            builder.Entity<Order>()
+            .HasOne(a => a.Material);
 
-            builder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
-            //builder.ApplicationSeed();
         }
 
-        public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
+        public virtual async Task<int> SaveChangesAsync(string userId = null)
         {
-            foreach (var entry in ChangeTracker.Entries<AuditableEntity>())
+            var auditEntries = OnBeforeSaveChanges(userId);
+            var result = await base.SaveChangesAsync();
+            await OnAfterSaveChanges(auditEntries);
+            return result;
+        }
+
+        private List<AuditEntry> OnBeforeSaveChanges(string userId)
+        {
+            ChangeTracker.DetectChanges();
+            var auditEntries = new List<AuditEntry>();
+            foreach (var entry in ChangeTracker.Entries())
             {
-                switch (entry.State)
+                if (entry.Entity is AuditTrail || entry.State == EntityState.Detached || entry.State == EntityState.Unchanged)
+                    continue;
+
+                var auditEntry = new AuditEntry(entry);
+                auditEntry.TableName = entry.Entity.GetType().Name;
+                auditEntry.UserId = userId;
+                auditEntries.Add(auditEntry);
+                foreach (var property in entry.Properties)
                 {
-                    case EntityState.Added:
-                        entry.Entity.CreatedBy = "user Can";
-                        entry.Entity.CreatedDate = DateTime.Now;
-                        break;
-                    case EntityState.Modified:
-                        entry.Entity.LastModifiedBy = "user Can";
-                        entry.Entity.LastModifiedDate = DateTime.Now;
-                        break;
+                    if (property.IsTemporary)
+                    {
+                        auditEntry.TemporaryProperties.Add(property);
+                        continue;
+                    }
+
+                    string propertyName = property.Metadata.Name;
+                    if (property.Metadata.IsPrimaryKey())
+                    {
+                        auditEntry.KeyValues[propertyName] = property.CurrentValue;
+                        continue;
+                    }
+                    auditEntry.UserId = userId ?? "mockUserId";
+                    switch (entry.State)
+                    {
+                        case EntityState.Added:
+                            auditEntry.AuditType = AuditType.Create;
+                            auditEntry.NewValues[propertyName] = property.CurrentValue;
+                            break;
+
+                        case EntityState.Deleted:
+                            auditEntry.AuditType = AuditType.Delete;
+                            auditEntry.OldValues[propertyName] = property.OriginalValue;
+                            break;
+
+                        case EntityState.Modified:
+                            if (property.IsModified)
+                            {
+                                auditEntry.ChangedColumns.Add(propertyName);
+                                auditEntry.AuditType = AuditType.Update;
+                                auditEntry.OldValues[propertyName] = property.OriginalValue;
+                                auditEntry.NewValues[propertyName] = property.CurrentValue;
+                            }
+                            break;
+                    }
                 }
             }
-            
-            return await base.SaveChangesAsync("123");
+            foreach (var auditEntry in auditEntries.Where(_ => !_.HasTemporaryProperties))
+            {
+                AuditTrails.Add(auditEntry.ToAudit());
+            }
+            return auditEntries.Where(_ => _.HasTemporaryProperties).ToList();
         }
+
+        private Task OnAfterSaveChanges(List<AuditEntry> auditEntries)
+        {
+            if (auditEntries == null || auditEntries.Count == 0)
+                return Task.CompletedTask;
+
+            foreach (var auditEntry in auditEntries)
+            {
+                foreach (var prop in auditEntry.TemporaryProperties)
+                {
+                    if (prop.Metadata.IsPrimaryKey())
+                    {
+                        auditEntry.KeyValues[prop.Metadata.Name] = prop.CurrentValue;
+                    }
+                    else
+                    {
+                        auditEntry.NewValues[prop.Metadata.Name] = prop.CurrentValue;
+                    }
+                }
+                AuditTrails.Add(auditEntry.ToAudit());
+            }
+            return SaveChangesAsync();
+        }
+
     }
 }

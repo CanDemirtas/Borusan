@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using CleanArch.Application.ViewModels;
+using CleanArch.Domain.Entities;
 
 namespace CleanArch.Application.Profiles
 {
@@ -7,9 +9,15 @@ namespace CleanArch.Application.Profiles
         public MappingProfile()
         {
 
-            // For Categories
-            //CreateMap<Category, CategoryDto>();
+            CreateMap<MaterialViewModel, Material>()
+                 .ForMember(x => x.LastModifiedDate, opt => opt.Ignore())
+                 .ForMember(x => x.LastModifiedBy, opt => opt.Ignore())
+                 .ReverseMap();
 
+            CreateMap<OrderViewModel, Order>()
+                 .ForMember(x => x.LastModifiedDate, opt => opt.Ignore())
+                 .ForMember(x => x.LastModifiedBy, opt => opt.Ignore())
+                 .ReverseMap();
         }
     }
 }

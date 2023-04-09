@@ -26,6 +26,10 @@ namespace CleanArch.Persistence.Repositories
         {
             return await _dbContext.Set<T>().ToListAsync();
         }
+        public IQueryable<T> GetQueryable()
+        {
+            return  _dbContext.Set<T>().AsQueryable();
+        }
 
         public async virtual Task<IReadOnlyList<T>> GetPagedReponseAsync(int page, int size)
         {
@@ -40,9 +44,19 @@ namespace CleanArch.Persistence.Repositories
             return entity;
         }
 
+        public async Task UpdateWithSaveChangesAsync(T entity)
+        {
+            _dbContext.Entry(entity).State = EntityState.Modified;
+            await SaveChangesAsync();
+        }
+
         public async Task UpdateAsync(T entity)
         {
             _dbContext.Entry(entity).State = EntityState.Modified;
+        }
+
+        public async Task SaveChangesAsync()
+        {
             await _dbContext.SaveChangesAsync();
         }
 
