@@ -1,0 +1,32 @@
+<mat-card fxLayout="column" fxLayoutAlign="space-between center">
+    <mat-card-content>
+        <h4>Customer Order Numbers:</h4>
+
+                <mat-list>
+                  <mat-list-item *ngFor="let order of orderData; index as i;">
+                    <span matListItemLine><b>Customer No: </b>{{order.CustomerOrderNumber}}</span>
+                    <span matListItemLine>{{order.Material.Code}} {{order.Material.Name}}</span>
+                    <span matListItemLine>{{order.Status | statusEnum }}</span>
+                  </mat-list-item>               
+                </mat-list>
+
+            <h4>Status:</h4>
+                <mat-select  [(value)]="selectedStatus" placeholder="Update order status">
+                    <mat-option value="0">Received</mat-option>
+                    <mat-option value="1">OnTheWay</mat-option>
+                    <mat-option value="2">AtDistributionCenter</mat-option>
+                    <mat-option value="3">OutForDelivery</mat-option>
+                    <mat-option value="4">Delivered</mat-option>
+                    <mat-option value="5">DeliveryFailed</mat-option>
+                </mat-select>
+                <div class="demo-button-container">
+                    <button
+                        mat-raised-button
+                        (click)="saveOrderStatus()"
+                        class="demo-button">
+                      Save Status
+                    </button>
+                  </div>
+    </mat-card-content>
+
+</mat-card>
