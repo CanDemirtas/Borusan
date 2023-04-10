@@ -57,19 +57,18 @@ namespace CleanArch.Api.Migrations
 
             modelBuilder.Entity("CleanArch.Domain.Entities.Material", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("CreatedBy")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("LastModifiedBy")
                         .HasColumnType("nvarchar(max)");
@@ -81,7 +80,10 @@ namespace CleanArch.Api.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.HasKey("Code");
+
+                    b.HasIndex("Code")
+                        .IsUnique();
 
                     b.ToTable("Materials");
                 });
@@ -116,8 +118,9 @@ namespace CleanArch.Api.Migrations
                     b.Property<DateTime?>("LastModifiedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid?>("MaterialCode")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("MaterialCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Note")
                         .HasColumnType("nvarchar(max)");
@@ -147,10 +150,17 @@ namespace CleanArch.Api.Migrations
             modelBuilder.Entity("CleanArch.Domain.Entities.Order", b =>
                 {
                     b.HasOne("CleanArch.Domain.Entities.Material", "Material")
-                        .WithMany()
-                        .HasForeignKey("MaterialCode");
+                        .WithMany("Orders")
+                        .HasForeignKey("MaterialCode")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Material");
+                });
+
+            modelBuilder.Entity("CleanArch.Domain.Entities.Material", b =>
+                {
+                    b.Navigation("Orders");
                 });
 #pragma warning restore 612, 618
         }

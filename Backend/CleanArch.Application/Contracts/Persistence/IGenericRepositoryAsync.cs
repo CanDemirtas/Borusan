@@ -9,13 +9,14 @@ namespace CleanArch.Application.Contracts.Persistence
     {
         Task<T> GetByIdAsync(Guid id);
         Task<IReadOnlyList<T>> ListAllAsync();
-        Task<T> AddAsync(T entity);
+        Task AddAsync(T entity);
         Task UpdateWithSaveChangesAsync(T entity);
         Task SaveChangesAsync();
+        Task<T> AddAsyncWithSaveChangesAsync(T entity);
         Task UpdateAsync(T entity);
         Task DeleteAsync(T entity);
         Task<IReadOnlyList<T>> GetPagedReponseAsync(int page, int size);
         IQueryable<T> GetQueryable();
-  
+        void DetachedEntry(T entry);
     }
 }

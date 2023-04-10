@@ -7,18 +7,28 @@ using CleanArch.Application.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
+using CleanArch.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace CleanArch.Infrastructure.Order
 {
     public class OrderService : IOrderService
     {
         private readonly IOrderRepository _orderRepository;
+        private readonly IMaterialRepository _materialRepository;
         private readonly IMapper _mapper;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public OrderService( ILogger<OrderService> logger, IOrderRepository orderRepository, IMapper mapper)
+        private readonly ILogger<OrderService> _logger;
+
+        public OrderService(IUnitOfWork unitOfWork,ILogger<OrderService> logger, IOrderRepository orderRepository, IMaterialRepository materialRepository, IMapper mapper)
         {
             _orderRepository = orderRepository;
+            _materialRepository = materialRepository;
             _mapper = mapper;
+            _logger = logger;
+            _unitOfWork = unitOfWork;
 
         }
 
@@ -26,16 +36,17 @@ namespace CleanArch.Infrastructure.Order
         {
             try
             {
-                var result = await _orderRepository.ListAllAsync();
+                var result = await _unitOfWork._orderRepository.ListAllAsync();
                 var orderList = _mapper.Map<List<OrderViewModel>>(result);
                 return orderList;
             }
             catch (Exception e)
             {
 
-                
+                _logger.LogError("Order Service FetchOrders:"+e.Message);
+                return new List<OrderViewModel>();
+
             }
-            return new List<OrderViewModel>();
         }
 
         public async Task<List<OrderViewModel>> UpdateOrderStatus(List<OrderViewModel> orderList)
@@ -45,44 +56,77 @@ namespace CleanArch.Infrastructure.Order
 
             try
             {
-                var orderListDb = _orderRepository.GetQueryable().Where(a => orderIdList.Contains(a.CustomerOrderNumber)).ToList();
+                var orderListDb = _unitOfWork._orderRepository.GetQueryable().Where(a => orderIdList.Contains(a.CustomerOrderNumber)).ToList();
 
-               var willBeUpdateList= orderListDb.Select(a => { a.Status = status; return a; }).ToList();
+                var willBeUpdateList = orderListDb.Select(a => { a.Status = status; return a; }).ToList();
 
-                foreach (var order in willBeUpdateList) {
-
-                    await _orderRepository.UpdateAsync(order);
+                foreach (var order in willBeUpdateList)
+                {
+                    await _unitOfWork._orderRepository.UpdateAsync(order);
                 }
-                await _orderRepository.SaveChangesAsync();
+                await _unitOfWork._orderRepository.SaveChangesAsync();
 
                 return orderList;
             }
             catch (Exception e)
             {
-
-
+                _logger.LogError(e.Message);
             }
             return new List<OrderViewModel>();
         }
-        public async Task<OrderViewModel> SaveOrders(OrderViewModel model)
-        {
 
+        public async Task<List<AcceptOrdersResponse>> SaveOrders(List<OrderViewModel> list)
+        {
             try
             {
-                var order = _mapper.Map<Domain.Entities.Order>(model);
+                var acceptOrdersResponseList = new List<AcceptOrdersResponse>();
 
-                var result = await _orderRepository.AddAsync(order);
+                foreach (var model in list)
+                {
+                    var acceptOrdersResponse = new AcceptOrdersResponse();
 
-                return model;
+                    var isExistOrder = _unitOfWork._orderRepository.GetQueryable().Any(a => a.CustomerOrderNumber == model.CustomerOrderNumber);
+                    if (isExistOrder)
+                    {
+                        acceptOrdersResponse.CustomerOrderNumber = model.CustomerOrderNumber;
+                        acceptOrdersResponse.ErrorMessage = "Aynı sipariş kodunda kayıt mevcut!";
+                        acceptOrdersResponse.Status = Status.Failed;
+                        acceptOrdersResponseList.Add(acceptOrdersResponse);
+                        continue;
+                    }
+                
+                    var order = _mapper.Map<Domain.Entities.Order>(model);
+                    order.Material.Id = Guid.NewGuid();
+                    var existingMaterial = _unitOfWork._materialRepository.GetQueryable().FirstOrDefault(a => a.Code == order.Material.Code);
+                    if (existingMaterial != null)
+                    {
+                        order.Material = null;
+                        order.MaterialCode = existingMaterial.Code;
+                    }
+
+
+                    await _unitOfWork._orderRepository.AddAsyncWithSaveChangesAsync(order);
+
+                    acceptOrdersResponse.Id = order.Id;
+                    acceptOrdersResponse.CustomerOrderNumber = order.CustomerOrderNumber;
+                    acceptOrdersResponseList.Add(acceptOrdersResponse);
+                }
+
+              
+                return acceptOrdersResponseList;
             }
             catch (System.Exception e)
             {
+                _logger.LogError(e.Message);
 
-             
+                return new List<AcceptOrdersResponse>() { new AcceptOrdersResponse() { Status = Status.Failed, ErrorMessage = e.Message } };
+
             }
-            return model;
+
         }
 
-       
+ 
+
+
     }
 }

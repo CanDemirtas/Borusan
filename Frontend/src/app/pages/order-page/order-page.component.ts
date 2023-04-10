@@ -1,8 +1,10 @@
 import { SelectionModel } from "@angular/cdk/collections";
-import { Component, OnInit } from "@angular/core";
 import { MatTableDataSource } from "@angular/material/table";
-import { FormControl } from "@angular/forms";
+import {MatTable} from '@angular/material/table';
 import { OrderService } from "src/app/core/services/order.service";
+import {MatDialog, MatDialogRef} from '@angular/material/dialog';
+import {Component, ViewChild} from '@angular/core';
+import { OrderStatusEditComponent } from "./order-status-edit/order-status-edit.component";
 
 export interface OrderModel {
   CustomerOrderNumber: String;
@@ -27,12 +29,30 @@ export enum SelectType {
   multiple
 }
 
+export enum OrderStatus {
+  Received,
+  OnTheWay,
+  AtDistributionCenter,
+  OutForDelivery,
+  Delivered,
+  DeliveryFailed
+}
+export enum WeightUnit
+{
+    Kilogram,
+    Ton,
+    Pound,
+    Other
+}
 @Component({
   selector: 'app-order-page',
   templateUrl: './order-page.component.html',
   styleUrls: ['./order-page.component.sass']
 })
 export class OrderPageComponent {
+
+  @ViewChild(MatTable) table: MatTable<OrderModel> | undefined;
+
   displayedColumns: string[] = [
     "select",
     "CustomerOrderNumber",
@@ -57,19 +77,31 @@ export class OrderPageComponent {
   selection = new SelectionModel<OrderModel>(true, []);
   displayType = SelectType.multiple;
 
-  constructor(private orderService: OrderService) { }
-  dataa: any;
+  constructor(private orderService: OrderService,public dialog: MatDialog) { }
+  
   ngOnInit() {
-
-    this.orderService.fetchOrders(null).subscribe((data: any) => {
-      this.dataa = data;
-      this.dataSource.data =data;
-
-      console.log("can:" + JSON.stringify(data));
-    });
-
+    this.dialog.afterAllClosed.subscribe(
+      () => {
+        this.fetchOrders();
+      }
+    );
+  this.fetchOrders();
   }
 
+  fetchOrders(){
+    this.orderService.fetchOrders(null).subscribe((data: any) => {
+      this.dataSource.data =data;
+    });
+  }
+
+  openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
+    this.dialog.open(OrderStatusEditComponent, {
+      width: '500px',
+      enterAnimationDuration,
+      exitAnimationDuration,
+      data:this.selection.selected
+    });
+  }
   selectHandler(row: OrderModel) {
     if (this.displayType == SelectType.single) {
       if (!this.selection.isSelected(row)) {
@@ -82,5 +114,13 @@ export class OrderPageComponent {
   onChange(typeValue: number) {
     this.displayType = typeValue;
     this.selection.clear();
+  }
+
+  addData() {
+
+  }
+
+  update() {
+    
   }
 }

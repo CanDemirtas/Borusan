@@ -28,6 +28,17 @@ export class OrderService {
             .pipe(retry(1), catchError(this.handleError));
     }
 
+    saveStatusOrder(list: any): Observable<OrderModel> {
+        return this.http
+            .post<any>(
+                "https://localhost:44311/api/Order" + '/UpdateStatus',
+                JSON.stringify(list),
+                this.httpOptions
+            )
+            .pipe(retry(1), catchError(this.handleError));
+    }
+
+
     handleError(error: any) {
         let errorMessage = '';
         if (error.error instanceof ErrorEvent) {

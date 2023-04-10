@@ -24,4 +24,8 @@
     <ProjectReference Include="..\CleanArch.Persistence\CleanArch.Persistence.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Serilogs\" />
+  </ItemGroup>
+
 </Project>

@@ -12,11 +12,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { OrderService } from './core/services/order.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { OrderStatusEditComponent } from './pages/order-page/order-status-edit/order-status-edit.component';
+import { EnumToDescriptionPipe } from './pages/status.pipe';
+import { UnitEnumPipe } from './pages/unit.pipe.ts';
 
 @NgModule({
   declarations: [
     AppComponent,
-    OrderPageComponent
+    OrderPageComponent,
+    OrderStatusEditComponent,
+    EnumToDescriptionPipe,
+    UnitEnumPipe
   ],
   imports: [
     BrowserModule,
@@ -29,6 +35,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     FormsModule,
     FlexLayoutModule
   ],
+  exports:[EnumToDescriptionPipe,UnitEnumPipe],
   entryComponents: [OrderPageComponent],
   providers: [{ provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },OrderService],
   bootstrap: [AppComponent]

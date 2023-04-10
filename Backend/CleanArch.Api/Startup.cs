@@ -33,7 +33,6 @@ namespace CleanArch.Api
             Log.Logger = new LoggerConfiguration().ReadFrom.Configuration(configuration).CreateLogger();
             Configuration = configuration;
 
-
         }
 
         public void ConfigureServices(IServiceCollection services)
@@ -44,8 +43,11 @@ namespace CleanArch.Api
             services.AddApplicationServices();
 
             services.AddInfrastructureServices(Configuration);
+            services.AddSwaggerGen();
 
             services.AddPersistenceServices(Configuration);
+
+            services.AddHealthChecks();
 
             services.AddApiVersioning(config =>
             {
@@ -55,6 +57,7 @@ namespace CleanArch.Api
             });
 
             services.AddFeatureManagement();
+
             services.AddCors(options =>
             {
                 options.AddPolicy(
@@ -72,7 +75,7 @@ namespace CleanArch.Api
                 app.UseDeveloperExceptionPage();
             }
 
-            //app.UseHttpsRedirection();
+            app.UseHttpsRedirection();
 
             app.UseRouting();
 
@@ -81,31 +84,31 @@ namespace CleanArch.Api
                 var context = serviceScope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
                 context.Database.Migrate();
             }
-            //log.AddSerilog();
+            log.AddSerilog();
 
             //app.UseAuthentication();
 
             //app.UseAuthorization();
 
-            //app.UseSwagger();
+            app.UseSwagger();
 
-            //app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "CleanArch.Api v1"));
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "BorusanOrder.Api v1"));
 
-            //app.UseHealthChecks("/healthz", new HealthCheckOptions
-            //{
-            //    Predicate = _ => true,
-            //    ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse,
-            //    ResultStatusCodes =
-            //    {
-            //        [HealthStatus.Healthy] = StatusCodes.Status200OK,
-            //        [HealthStatus.Degraded] = StatusCodes.Status500InternalServerError,
-            //        [HealthStatus.Unhealthy] = StatusCodes.Status503ServiceUnavailable,
-            //    },
-            //}).UseHealthChecksUI(setup =>
-            //{
-            //    setup.ApiPath = "/healthcheck";
-            //    setup.UIPath = "/healthcheck-ui";
-            //});
+            app.UseHealthChecks("/healthz", new HealthCheckOptions
+            {
+                Predicate = _ => true,
+                ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse,
+                ResultStatusCodes =
+                {
+                    [HealthStatus.Healthy] = StatusCodes.Status200OK,
+                    [HealthStatus.Degraded] = StatusCodes.Status500InternalServerError,
+                    [HealthStatus.Unhealthy] = StatusCodes.Status503ServiceUnavailable,
+                },
+            }).UseHealthChecksUI(setup =>
+            {
+                setup.ApiPath = "/healthcheck";
+                setup.UIPath = "/healthcheck-ui";
+            });
 
             //app.UseCustomExceptionHandler();
 

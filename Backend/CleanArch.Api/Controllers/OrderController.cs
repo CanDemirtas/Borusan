@@ -4,7 +4,6 @@ using CleanArch.Application.Profiles;
 using CleanArch.Application.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -23,40 +22,39 @@ namespace CleanArch.Api.Controllers
         public OrderController(IOrderService orderService, ILogger<OrderController> logger)
         {
             _orderService = orderService;
-            _logger = logger;
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
-
-            _logger.LogInformation("Hello, world!");
-            _logger.LogError("Hello, world!");
 
         }
 
         [HttpPost("AcceptOrders")]
-        public async Task<ActionResult> AcceptOrders([FromBody] OrderViewModel model)
+        public async Task<ActionResult> AcceptOrders([FromBody] List<OrderViewModel> model)
         {
             try
             {
-                var data = _orderService.SaveOrders(model);
-                return Ok(data);
+                var data = await _orderService.SaveOrders(model);
+
+                return Ok(Newtonsoft.Json.JsonConvert.SerializeObject(data));
             }
             catch (System.Exception e)
             {
+                _logger.LogError("AcceptOrders Controller Method Error:"+e.Message);
 
                 return BadRequest(e.Message);
-            }
-
-        
+            }       
         }
+
         [HttpPost("UpdateStatus")]
         public async Task<ActionResult> UpdateStatus([FromBody] List<OrderViewModel> model)
         {
             try
             {
                 var result = await _orderService.UpdateOrderStatus(model);
-                return Ok(result);
+                //http call yada signalr üzerinden entegrasyon..
+                return Ok(Newtonsoft.Json.JsonConvert.SerializeObject(result));
             }
             catch (System.Exception e)
             {
+                _logger.LogError("UpdateStatus Controller Method Error:" + e.Message);
 
                 return BadRequest(e.Message);
             }
@@ -74,6 +72,7 @@ namespace CleanArch.Api.Controllers
             }
             catch (System.Exception e)
             {
+                _logger.LogError("UpdateStatus Controller Method Error:" + e.Message);
 
                 return BadRequest(e.Message);
             }

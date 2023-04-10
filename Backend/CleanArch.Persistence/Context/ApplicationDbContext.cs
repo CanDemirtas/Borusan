@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -17,7 +18,7 @@ namespace CleanArch.Persistence.Context
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
            : base(options)
         {
-            //ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
+            ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
 
         }
 
@@ -25,12 +26,20 @@ namespace CleanArch.Persistence.Context
         public DbSet<Order> Orders { get; set; }
         public DbSet<AuditTrail> AuditTrails { get; set; }
 
-       
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<Order>()
-            .HasOne(a => a.Material);
+            .HasOne(o => o.Material)
+            .WithMany(m => m.Orders);
 
+            builder.Entity<Material>()
+            .HasKey(m => m.Code);
+
+            builder.Entity<Material>()
+            .HasMany(m => m.Orders)
+            .WithOne(o => o.Material)
+            .HasForeignKey(o => o.MaterialCode);
         }
 
         public virtual async Task<int> SaveChangesAsync(string userId = null)

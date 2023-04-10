@@ -1,4 +1,14 @@
-<mat-card fxLayout="row" fxLayoutAlign="space-evenly center">
-  <mat-card-content> <router-outlet></router-outlet>
+<mat-card fxLayout="column" fxLayoutAlign="space-between center">
+ 
+    <mat-toolbar>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Borusan</span>
+      <span class="example-spacer"></span>
+    </mat-toolbar>
+
+  <mat-card-content >
+    <router-outlet></router-outlet>
   </mat-card-content>
 </mat-card>

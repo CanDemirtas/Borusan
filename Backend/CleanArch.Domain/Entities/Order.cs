@@ -37,6 +37,9 @@ namespace CleanArch.Domain.Entities
         [Required]
         public OrderStatus Status { get; set; }
 
+        [Required]
+        public string MaterialCode { get; set; }
+
         [ForeignKey("MaterialCode")]
         public Material Material { get; set; }
     }

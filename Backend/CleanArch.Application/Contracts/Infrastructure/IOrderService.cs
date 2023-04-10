@@ -6,7 +6,7 @@ namespace CleanArch.Application.Contracts.Infrastructure
 {
     public interface IOrderService
     {
-        Task<OrderViewModel> SaveOrders(OrderViewModel model);
+        Task<List<AcceptOrdersResponse>> SaveOrders(List<OrderViewModel> list);
         Task<List<OrderViewModel>> FetchOrders();
         Task<List<OrderViewModel>> UpdateOrderStatus(List<OrderViewModel> orderList);
     }

@@ -1,5 +1,13 @@
 <div class="container" fxLayout="column" fxLayoutAlign="space-evenly center">
-
+    <div class="demo-button-container">
+        <button
+            mat-raised-button
+            [disabled]="selection.selected.length==0"
+            (click)="openDialog('600ms', '400ms')"
+            class="demo-button">
+          Update 
+        </button>
+      </div>
     <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
         <!-- Checkbox Column -->
@@ -57,19 +65,19 @@
         <!-- weightUnit Column -->
         <ng-container matColumnDef="WeightUnit">
             <mat-header-cell *matHeaderCellDef> Weight Unit</mat-header-cell>
-            <mat-cell *matCellDef="let element"> {{element.WeightUnit}} </mat-cell>
+            <mat-cell *matCellDef="let element"> {{element.WeightUnit | unitEnum}} </mat-cell>
         </ng-container>
 
         <!-- status Column -->
         <ng-container matColumnDef="Status">
             <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
-            <mat-cell *matCellDef="let element"> {{element.Status}} </mat-cell>
+            <mat-cell *matCellDef="let element"> {{element.Status  | statusEnum }} </mat-cell>
         </ng-container>
 
         <!-- material Column -->
         <ng-container matColumnDef="Material">
             <mat-header-cell *matHeaderCellDef> Material </mat-header-cell>
-            <mat-cell *matCellDef="let element"> {{element.Material}} </mat-cell>
+            <mat-cell *matCellDef="let element"> {{element.Material.Code}} </mat-cell>
         </ng-container>
 
         <!-- note Column -->
@@ -88,9 +96,4 @@
         <mat-row *matRowDef="let row; columns: displayedColumns;">
         </mat-row>
     </mat-table>
-
-    <pre>
-      <h3>Selected :</h3>
-      {{selection.selected | json}}
-    </pre>
 </div>

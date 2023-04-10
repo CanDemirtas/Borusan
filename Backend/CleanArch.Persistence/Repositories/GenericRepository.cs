@@ -1,4 +1,5 @@
 ﻿using CleanArch.Application.Contracts.Persistence;
+using CleanArch.Domain.Entities;
 using CleanArch.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -26,24 +27,32 @@ namespace CleanArch.Persistence.Repositories
         {
             return await _dbContext.Set<T>().ToListAsync();
         }
+
         public IQueryable<T> GetQueryable()
         {
-            return  _dbContext.Set<T>().AsQueryable();
+            return _dbContext.Set<T>().AsQueryable();
         }
-
+        public void DetachedEntry(T entry)
+        {
+            _dbContext.Entry<T>(entry).State = EntityState.Modified;
+        }
         public async virtual Task<IReadOnlyList<T>> GetPagedReponseAsync(int page, int size)
         {
             return await _dbContext.Set<T>().Skip((page - 1) * size).Take(size).AsNoTracking().ToListAsync();
         }
 
-        public async Task<T> AddAsync(T entity)
+        public async Task AddAsync(T entity)
+        {
+            await _dbContext.Set<T>().AddAsync(entity);
+        }
+
+        public async Task<T> AddAsyncWithSaveChangesAsync(T entity)
         {
             await _dbContext.Set<T>().AddAsync(entity);
             await _dbContext.SaveChangesAsync();
 
             return entity;
         }
-
         public async Task UpdateWithSaveChangesAsync(T entity)
         {
             _dbContext.Entry(entity).State = EntityState.Modified;
